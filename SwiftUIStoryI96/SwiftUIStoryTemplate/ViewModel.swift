@@ -28,6 +28,7 @@ class ViewModel: ObservableObject {
     // Published variables accessed and mutated in views
     @Published var storyBegan = false
     @Published var isConvinced: Bool = false
+    @Published var drCathy = Biologist(name: "Dr.Cathy Morgan", age: 62)
     
     // Variables, Constants, Arrays, Optionals (Strings and Int)
     @Published var dispositions: [String] = ["happy", "silly", "huge","hungry", "grumpy", "smart", "starving", "killer", "crabby", "spongy", "tiny", "hammerhead", "slimy", "beautiful", "friendly", "strong", "bully"]
