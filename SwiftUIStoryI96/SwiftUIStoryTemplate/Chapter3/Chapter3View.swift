@@ -6,7 +6,7 @@ struct Chapter3View: View {
          NavigationView {
                             ScrollView {
                                 VStack(spacing: 20) {
-                                    ForEach(1...10, id: \.self) { pageNumber in
+                                    ForEach(1...8, id: \.self) { pageNumber in
                                         NavigationLink(destination: ComicPageView(pageNumber: pageNumber)) {
                                             Text("Page \(pageNumber)")
                                                 .font(.title)
@@ -35,17 +35,22 @@ struct ComicPageView: View {
             Text("Page \(pageNumber)")
                 .font(.largeTitle)
                 .padding()
-            Text("")
+//                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+            
             
             if pageNumber % 2 == 0 {
-                Text("Even page content")
-                    .font(.headline)
-            } else {
+                Text("In the depths of the ocean, a spirited dolphin named Fin embarked on a remarkable journey when he was only 9 years old. ") } else {
                 Image("sharkfin")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                
-                
+                    
+                    Spacer()
+                   
+//                    Text("Page \(pageNumber)")
+//                        .font(.largeTitle)
+//                        .padding()
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+
                 // For example, you can display an image for the page
                 Image("comic_page_\(pageNumber)")
                     .resizable()
